@@ -1,0 +1,20 @@
+{
+    "name": "测试chrome扩展程序",
+    "version": "2.0",
+    "manifest_version": 2,
+    "description": "测试chrome扩展程序，在页面运行一个JS",
+    "permissions": [
+        "http://*/"
+    ],
+    "icons": {
+        "16": "icon-16-coco.png",
+        "128": "icon-128-coco.png"
+    },
+    "browser_action": {
+        "default_icon": "icon-16-coco.png"
+    },
+    "content_scripts": [{
+        "matches": ["http://*/", "https://*/", "http://*/*", "https://*/*"],
+        "js": ["js/my-alert-script.js"]
+    }]
+}
